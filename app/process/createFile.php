@@ -1,3 +1,4 @@
+
 <?php
 require_once("../model/model.php");
 
@@ -43,7 +44,11 @@ $xml = $dom->saveXML();
 if ($model->returnDB($campos["email"]) == false) {
 
     $dom->save(dirname(__DIR__) . "./db/" . $campos["email"] . ".xml");
-
+    
+    session_start();
+    $_SESSION["email"] = $campos["email"];
+    $_SESSION["name"] = $campos["name"];
+    
     header("Location://localhost/php/aplicationXML/public/welcome.php");
 
 } else {

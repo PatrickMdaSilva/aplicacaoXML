@@ -14,7 +14,7 @@ session_start();
 
 <body>
     <div class="cadastrar">
-        <h2>Bem vindo</h2>
+        <h2>Bem vindo(a) <?= $_SESSION["name"] ?></h2>
     </div>
     <div class="login">
         <p><a class="sub" href="index.php">Sair</a></p>
