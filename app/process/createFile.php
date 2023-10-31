@@ -42,12 +42,12 @@ $xml = $dom->saveXML();
 
 if ($model->returnDB($campos["email"]) == false) {
 
-    $dom->save(__DIR__ . "./db/" . $campos["email"] . ".xml");
+    $dom->save(dirname(__DIR__) . "./db/" . $campos["email"] . ".xml");
 
     header("Location://localhost/php/aplicationXML/public/welcome.php");
 
 } else {
 
     header("Location://localhost/php/aplicationXML/public/validate.php");
-    
+
 }
