@@ -11,7 +11,7 @@
 <body>
     <div class="cadastrar">
         <h2>Criar conta</h2>
-        <form action="../process/createFile.php" method="POST">
+        <form action="../app/process/createFile.php" method="POST">
             <div class="div-input">
                 <label for="name">Nome:</label>
                 <input type="text" name="name" required>

@@ -11,7 +11,7 @@
 <body>
     <div class="cadastrar">
         <h2>Entrar</h2>
-        <form action="../process/login.php" method="POST">
+        <form action="../app/process/login.php" method="POST">
             <div class="div-input">
                 <label for="email">Email</label>
                 <input type="email" name="email" required>
