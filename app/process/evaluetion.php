@@ -14,6 +14,7 @@ $measures = [
     'age' => filter_input(INPUT_POST, 'age'),
     'neck' => filter_input(INPUT_POST, 'neck'),
     'abd' => filter_input(INPUT_POST, 'abd'),
+    'sex' => filter_input(INPUT_POST, 'sex'),
 ];
 
 foreach ($measures as $measure => $valor) {
@@ -25,13 +26,14 @@ foreach ($measures as $measure => $valor) {
     ${$measure}->appendChild(${$valor});
 }
 
-$userNode = $dom->createElement("address");
+$userNode = $dom->createElement("measures");
 
 $userNode->appendChild($weight);
 $userNode->appendChild($height);
 $userNode->appendChild($age);
 $userNode->appendChild($neck);
 $userNode->appendChild($abd);
+$userNode->appendChild($sex);
 
 $rootNode = $dom->createElement("root");
 

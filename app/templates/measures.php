@@ -25,6 +25,14 @@ if (isset($_SESSION["name"]) && $_SESSION["email"]) {
                 <label for="abd">Abdômen:</label>
                 <input type="text" name="abd" required>
             </div>
+            <div class="div-input">
+                <label for="sex">Escolha osexo</label>
+                <select class="div-input" name="sex" id="sex" required>
+                    <option>Escolha o sexo</option>
+                    <option value="0">Masculino</option>
+                    <option value="1">Feminino</option>
+                </select>
+            </div>
             <input class="sub" type="submit">
         </form>
     </div>

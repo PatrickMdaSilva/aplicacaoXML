@@ -9,7 +9,7 @@ class model
         }
     }
 
-    function validateAccount($email, $folder)
+    public function validateAccount($email, $folder)
     {
         $file = simplexml_load_file("http://localhost/php/aplicationXML/app/db/$folder/$email.xml");
 
@@ -22,7 +22,7 @@ class model
         }
     }
 
-    function tranformXMLObject($email, $folder)
+    public function tranformXMLObject($email, $folder)
     {
         
         // xml file path

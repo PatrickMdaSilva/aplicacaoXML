@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <measures>
+    <weight>90</weight>
+    <height>130</height>
+    <age>55</age>
+    <neck>20</neck>
+    <abd>80</abd>
+    <sex>Escolha o sexo</sex>
+  </measures>
+</root>

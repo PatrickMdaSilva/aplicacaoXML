@@ -16,7 +16,7 @@ $model = new Model();
 
     } elseif (!isset($_GET['pag'])){
         
-        require_once( "../templates/home.php");
+        require_once( "../app/templates/home.php");
         
     }
         
