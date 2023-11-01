@@ -6,21 +6,22 @@ $model = new model;
 $email = filter_input(INPUT_POST, 'email');
 $password = filter_input(INPUT_POST, 'password');
 
-$xml = $model->returnDB($email);
+$folder = "user";
+$xml = $model->validateAccount($email, $folder);
 
 
 if ($xml != false && $xml->user->password == $password) {
 
-    
-    $arrayUser = $model->tranformXMLObject($email);
+    $folder = "user";
+    $arrayUser = $model->tranformXMLObject($email, $folder);
     
     session_start();
     $_SESSION["email"] = $arrayUser["user"]["email"];
     $_SESSION["name"] = $arrayUser["user"]["name"];
     
 
-    header("Location://localhost/php/aplicationXML/public/welcome.php");
+    header("Location://localhost/php/aplicationXML/public/index.php?pag=welcome&folder=templates");
 } else {
 
-    header("Location://localhost/php/aplicationXML/public/error.php");
+    header("Location://localhost/php/aplicationXML/public/index.php?pag=error&folder=templates");
 }

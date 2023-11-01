@@ -1,0 +1,49 @@
+
+<?php
+require_once("../model/model.php");
+session_start();
+$model = new model;
+
+$dom = new DOMDocument("1.0", "UTF-8");
+
+$dom->formatOutput = true;
+
+$measures = [
+    'weight' => filter_input(INPUT_POST, 'weight'),
+    'height'  => filter_input(INPUT_POST, 'height'),
+    'age' => filter_input(INPUT_POST, 'age'),
+    'neck' => filter_input(INPUT_POST, 'neck'),
+    'abd' => filter_input(INPUT_POST, 'abd'),
+];
+
+foreach ($measures as $measure => $valor) {
+    
+    ${$measure} = [$measure];
+    ${$valor} = [$valor];
+    ${$valor} = $dom->createTextNode($valor);
+    ${$measure} = $dom->createElement($measure);
+    ${$measure}->appendChild(${$valor});
+}
+
+$userNode = $dom->createElement("address");
+
+$userNode->appendChild($weight);
+$userNode->appendChild($height);
+$userNode->appendChild($age);
+$userNode->appendChild($neck);
+$userNode->appendChild($abd);
+
+$rootNode = $dom->createElement("root");
+
+$rootNode->appendChild($userNode);
+$dom->appendChild($rootNode);
+
+$xml = $dom->saveXML();
+$folder = "measures";
+
+//salva os dados em um arquivo XML
+
+$dom->save(dirname(__DIR__) . "./db/measures/" . $_SESSION["email"] . ".xml");
+    
+ header("Location://localhost/php/aplicationXML/public/index.php?pag=welcome&folder=templates");
+

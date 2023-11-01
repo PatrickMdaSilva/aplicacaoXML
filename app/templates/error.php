@@ -1,7 +1,3 @@
-<?php 
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,10 +10,7 @@ session_start();
 
 <body>
     <div class="cadastrar">
-        <h2>Bem vindo(a) <?= $_SESSION["name"] ?></h2>
-    </div>
-    <div class="login">
-        <p><a class="sub" href="index.php">Sair</a></p>
+        <h2>Email ou senha incorretos</h2>
     </div>
 </body>
 

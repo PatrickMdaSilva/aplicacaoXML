@@ -38,21 +38,21 @@ $rootNode->appendChild($userNode);
 $dom->appendChild($rootNode);
 
 $xml = $dom->saveXML();
-
+$folder = "user";
 //salva os dados em um arquivo XML
 
-if ($model->returnDB($campos["email"]) == false) {
+if ($model->validateAccount($campos["email"], $folder) == false) {
 
-    $dom->save(dirname(__DIR__) . "./db/" . $campos["email"] . ".xml");
+    $dom->save(dirname(__DIR__) . "./db/user/" . $campos["email"] . ".xml");
     
     session_start();
     $_SESSION["email"] = $campos["email"];
     $_SESSION["name"] = $campos["name"];
     
-    header("Location://localhost/php/aplicationXML/public/welcome.php");
+    header("Location://localhost/php/aplicationXML/public/index.php?pag=welcome&folder=templates");
 
 } else {
 
-    header("Location://localhost/php/aplicationXML/public/validate.php");
+    header("Location://localhost/php/aplicationXML/public/index.php?pag=validate&folder=templates");
 
 }
