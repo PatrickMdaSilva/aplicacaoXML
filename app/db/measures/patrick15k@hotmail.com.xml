@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <measures>
+    <weight>140</weight>
+    <height>175</height>
+    <age>40</age>
+    <neck>60</neck>
+    <qua>100</qua>
+    <abd>140</abd>
+    <sex>0</sex>
+  </measures>
+</root>

@@ -19,10 +19,3 @@ $model = new Model();
         require_once( "../app/templates/home.php");
         
     }
-        
-
-    
-?>
-
-
-

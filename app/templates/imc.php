@@ -1,7 +1,7 @@
 <?php
 $folder = "measures";
 
-if ($model->validateAccount($_SESSION["email"],$folder)) {
+if ($model->validateAccount($_SESSION["email"],$folder) == true && isset($_SESSION["email"])) {
 $arrayMeasures = $model->tranformXMLObject($_SESSION["email"], $folder);
 $weight = $arrayMeasures["measures"]["weight"];
 $height = $arrayMeasures["measures"]["height"] / 100;

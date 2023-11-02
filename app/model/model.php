@@ -63,5 +63,37 @@ class model
             return "O seu imc é $imc  e se encontra (Obesidade Grau III)";
         }
     }
+
+    public function calcKcal($weight, $height, $age, $sex) {
+
+        // Use a fórmula de Harris-Benedict para calcular a necessidade calórica
+        if ($sex === '0') {
+            $kcal = 88.362 + (13.397 * $weight) + (4.799 * $height) - (5.677 * $age);
+        } elseif ($sex === '1') {
+            $kcal = 447.593 + (9.247 * $weight) + (3.098 * $height) - (4.330 * $age);
+        } else {
+            $kcal = "";
+        }
+
+        if($kcal != ""){
+            $kcal = number_format($kcal, 0, '.', '');
+        }
+    
+        return $kcal;
+    }
+
+    function calcMass($abdomen, $quadril,  $pescoco, $altura, $sex) {
+        
+        if($sex == 0){
+
+            $fat = 85.79 * log10($abdomen - $pescoco) - 62.56 * log10($altura) + 12.76;
+        }else {
+
+            $fat = 135.10 * log10($quadril + $abdomen - $pescoco) - 93.93 * log10($altura) + 46.65;
+        }
+    
+        return $fat = number_format($fat, 1, '.', '');;
+    }
+    
     
 }

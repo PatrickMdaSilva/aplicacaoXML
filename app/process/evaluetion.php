@@ -13,6 +13,7 @@ $measures = [
     'height'  => filter_input(INPUT_POST, 'height'),
     'age' => filter_input(INPUT_POST, 'age'),
     'neck' => filter_input(INPUT_POST, 'neck'),
+    'qua' => filter_input(INPUT_POST, 'qua'),
     'abd' => filter_input(INPUT_POST, 'abd'),
     'sex' => filter_input(INPUT_POST, 'sex'),
 ];
@@ -32,6 +33,7 @@ $userNode->appendChild($weight);
 $userNode->appendChild($height);
 $userNode->appendChild($age);
 $userNode->appendChild($neck);
+$userNode->appendChild($qua);
 $userNode->appendChild($abd);
 $userNode->appendChild($sex);
 

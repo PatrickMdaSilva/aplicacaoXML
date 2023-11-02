@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_SESSION["name"]) && $_SESSION["email"]) {
+if (isset($_SESSION["email"])) {
 ?>
 
         <div class="cadastrar">

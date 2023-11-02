@@ -10,13 +10,13 @@
  <body>
     <header>
         <div class="title">
-            <h1>Avaliação<?= isset($_SESSION["name"]) ? " de " . $_SESSION["name"] : "" ?></h1>
+            <h1>Atleta <?= isset($_SESSION["name"]) ? $_SESSION["name"] : "" ?></h1>
         </div>
         <div class="menu-list">
             <ul>
                 <?php if(isset($_SESSION["email"])) { ?>             
                 <li><a href="../public/index.php?pag=measures&folder=templates">Medidas</a></li>
-                <li><a href="../public/index.php?pag=imc&folder=templates">IMC</a></li>
+                <li><a href="../public/index.php?pag=nav&folder=templates">Avaliações</a></li>
                 <li><a href="">item</a></li>
                 <li><a href="../public/index.php?pag=logout&folder=templates">Sair</a></li>
                 <?php } else { ?> 

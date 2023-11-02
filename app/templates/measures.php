@@ -1,5 +1,5 @@
 <?php
-if (isset($_SESSION["name"]) && $_SESSION["email"]) {
+if (isset($_SESSION["email"])) {
 ?>
 
     <div class="cadastrar">
@@ -22,7 +22,11 @@ if (isset($_SESSION["name"]) && $_SESSION["email"]) {
                 <input type="text" name="neck" required>
             </div>
             <div class="div-input">
-                <label for="abd">Abdômen:</label>
+                <label for="qua">Quadril:</label>
+                <input type="text" name="qua" required>
+            </div>
+            <div class="div-input">
+                <label for="abd">Cintura: Fem. | Abdômen: Masc.</label>
                 <input type="text" name="abd" required>
             </div>
             <div class="div-input">
