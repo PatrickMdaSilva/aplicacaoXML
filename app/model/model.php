@@ -87,9 +87,9 @@ class model
         if($sex == 0){
 
             $fat = 85.79 * log10($abdomen - $pescoco) - 62.56 * log10($altura) + 12.76;
-        }else {
+        }elseif($sex == 1) {
 
-            $fat = 135.10 * log10($quadril + $abdomen - $pescoco) - 93.93 * log10($altura) + 46.65;
+            $fat = 135.10 * log10($quadril + $abdomen - $pescoco) - 97.93 * log10($altura) - 46.65;
         }
     
         return $fat = number_format($fat, 1, '.', '');;
