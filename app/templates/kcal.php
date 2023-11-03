@@ -21,7 +21,7 @@ $kcal = $model->calcKcal($weight, $height, $age, $sex);
         <br>
         <p>Sua idade atual é <?= $arrayMeasures["measures"]["age"] ?> anos</p>
         <br>
-        <h3>Seu gasto calórico atual é de <?= $kcal ?></h3>
+        <h3>Seu gasto calórico atual é de <?= $kcal ?> kcal</h3>
 
     </div>
 

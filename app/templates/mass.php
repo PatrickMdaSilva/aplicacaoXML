@@ -25,8 +25,8 @@ $fit = 100 - $fat;
         <br>
         <p>Sua altura atual é <?= $arrayMeasures["measures"]["height"] ?> cm</p>
         <br>
-        <h3>Seu percentual de gordura é  <?= $fat ?></h3>
-        <h3>Seu percentual de massa magra é  <?= $fit ?></h3>
+        <h3>Seu percentual de gordura é  <?= $fat ?>%</h3>
+        <h3>Seu percentual de massa magra é  <?= $fit ?>%</h3>
 
     </div>
 
